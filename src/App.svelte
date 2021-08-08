@@ -89,7 +89,8 @@
 
   @media (max-width: 922px) {
     main {
-      grid-template-rows: 1fr 1fr;
+      --scarecrow-height: 238px;
+      grid-template-rows: minmax(calc(var(--scarecrow-height) + 150px), 1fr) 1fr;
       grid-template-columns: 1fr;
       padding-left: 23px;
     }
@@ -101,7 +102,7 @@
 
     .scarecrow {
       width: 286.83px;
-      height: 238px;
+      height: var(--scarecrow-height);
       transform: translateX(-23px);
     }
 
